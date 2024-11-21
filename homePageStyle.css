@@ -1,0 +1,68 @@
+.grid-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 60px 250px 40px auto 100px;
+}
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+}
+.header > div{
+    margin-right: 15px;
+}
+.header > div:nth-child(2) {
+    margin-left: auto;
+}
+
+.trailers{
+    grid-column: 1 / -1;
+}
+.trending-now{
+    grid-column: 1 / -1;
+}
+/* Picture Grid */
+.content-grid {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+
+.posters > figure {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 -4px 6px rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+figure:hover {
+    box-shadow: 0 8px 12px rgba(228, 228, 228, 0.9), 0 -8px 12px rgba(228, 228, 228, 0.9);
+}
+
+img {
+    width: 100%; /* Allow the image to scale to the container */
+    height: 250%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images fill the grid cell neatly */
+}
+
+
+figcaption {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    font-size: 1rem;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
+
+.footer > p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+

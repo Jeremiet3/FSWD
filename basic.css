@@ -1,0 +1,26 @@
+html, body {
+  background-color: #000;
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+  }
+.header > div {
+  display: flex;
+  font-size: 1em;
+  padding: 10px 20px;
+}
+.header {
+  background-color: #273c4d;
+}
+  
+.content-grid {
+  background-color: #000;
+}
+.footer {
+  background-color: #5e1e1e;
+}
+
+.header, .trailers, .trending-now{
+  font-size: 30px;
+  align-items: center;
+}
