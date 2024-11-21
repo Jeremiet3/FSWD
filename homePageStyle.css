@@ -35,6 +35,12 @@
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 -4px 6px rgba(0, 0, 0, 0.7);
     transition: 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    height: 350px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 
@@ -63,6 +69,17 @@ figcaption {
 .footer > p{
     text-align: center;
     margin-top: 20px;
+}
+
+.youtube-video {
+    width: 100%; /* S'adapte à la largeur de la page */
+    height: calc(100vw * 16 / 9); /* Ajuste la hauteur pour un ratio 9:16 */
+    max-height: 90vh; /* Limite la hauteur à 90% de la hauteur de l'écran */
+    object-fit: cover; /* S'assure que la vidéo couvre tout le conteneur */
+    margin: 0 auto; /* Centre horizontalement */
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
