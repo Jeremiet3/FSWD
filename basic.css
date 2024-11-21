@@ -3,6 +3,7 @@ html, body {
   margin: 10px;
   font-size: 20px;
   color: #fff;
+  box-sizing: border-box; 
   }
 .header > div {
   display: flex;
