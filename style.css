@@ -103,7 +103,9 @@ body {
     font-weight: 600;
     transition: background-color 0.3s ease;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
+
 
 /* Button Hover Effect */
 .btn:hover {
@@ -123,4 +125,46 @@ a {
 
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+.input-box textarea {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px; /* Consistent padding */
+    font-size: 16px;
+    resize: none; /* Prevent resizing by the user */
+    outline: none; /* Remove outline on focus */
+}
+
+.input-box select {
+    width: 100%;
+    height: 50px;
+    background: transparent; /* Matches the form's background */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    color: white; /* Text color matches other inputs */
+    padding: 10px 15px; /* Spacing inside the dropdown */
+    appearance: none; /* Removes the default browser dropdown arrow */
+    outline: none; /* Removes focus outline */
+    cursor: pointer; /* Shows pointer cursor on hover */
+}
+
+.input-box select option {
+    background: #333; /* Dropdown options background */
+    color: white; /* Option text color */
+    font-size: 16px; /* Consistent font size */
+}
+
+.input-box select:focus {
+    border-color: white; /* Highlight border on focus */
+}
+
+/* Custom arrow for the dropdown */
+.input-box {
+    position: relative;
 }

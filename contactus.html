@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Contact Us</h1>
+        <h1>Contact Us</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <!-- Name -->
+            <div class="input-box">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+            </div>
+    
+            <!-- Email -->
+            <div class="input-box">
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+            </div>
+    
+            <!-- Subject Dropdown -->
+            <div class="input-box">
+                <select name="subject" id="subject" required>
+                    <option value="" disabled selected>Select a Subject</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="billing">Billing Issue</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+    
+            <!-- Message -->
+            <div class="input-box">
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    
+        <!-- Confirmation Message -->
+        <p id="confirmationMessage" style="display: none; color: limegreen; text-align: center; font-size: 16px; margin-top: 20px;">
+            Your message has been sent successfully!
+        </p>
+    </div>
+
+    <script>
+        function validateForm() {
+            const subject = document.getElementById('subject').value;
+    const confirmationMessage = document.getElementById('confirmationMessage');
+
+    if (!subject) {
+        alert('Please select a subject.');
+        return false; // Prevent form submission
+    }
+
+    // Show the confirmation message
+    confirmationMessage.style.display = 'block';
+
+    // Wait 5 seconds and redirect to homepage.html
+    setTimeout(() => {
+        window.location.href = 'homepage.html';
+    }, 1000); // 1000 milliseconds = 1 second
+
+    return false; // Prevent form from actually submitting for demonstration purposes
+}
+    </script>
+</body>
+</html>

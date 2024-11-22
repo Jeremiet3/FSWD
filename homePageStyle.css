@@ -58,7 +58,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7), 0 -4px 6px rgba(0, 0, 0, 0.7);
     transition: 0.3s ease, box-shadow 0.3s ease;
     width: 200px;
-    height: 400px; 
+    height: 360px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,4 +92,24 @@ figcaption {
     margin-top: 20px;
 }
 
+/* General button style for links */
+.header a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
 
+/* Hover animation */
+.header a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+}
