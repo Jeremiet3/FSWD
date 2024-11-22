@@ -168,3 +168,27 @@ a {
 .input-box {
     position: relative;
 }
+
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px; /* Smaller font size */
+    font-weight: 500; /* Slightly lighter font weight */
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px; /* Reduced padding */
+    border: 1px solid white; /* Thinner border */
+    border-radius: 15px; /* Smaller border radius */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.05); /* Slightly smaller zoom-in effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtler shadow */
+}
+
