@@ -1,11 +1,17 @@
 .grid-page {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60px 500px 40px auto 100px;
+    grid-template-rows: auto 500px 40px auto 100px;
 }
 .header {
     grid-column: 1 / -1;
     display: flex;
+}
+.logo {
+    width:12%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
 }
 .header > div{
     margin-right: 15px;

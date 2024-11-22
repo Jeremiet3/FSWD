@@ -10,10 +10,16 @@ html, body {
   font-size: 1em;
   padding: 10px 20px;
 }
-.header {
-  background-color: #273c4d;
+
+.header{
+  background-color: #000;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-  
+.header:hover {
+  background-color: #18232e; /* Slightly lighter background color on hover */
+  transform: scale(1.01); /* Slight scaling for a subtle effect */
+}
 .content-grid {
   background-color: #000;
 }
