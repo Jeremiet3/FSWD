@@ -8,14 +8,11 @@
     display: flex;
 }
 .logo {
-    width:12%;
+    width: max(12%, 100px);
     height: auto;
-    display: block;
     border-radius: 2px;
 }
-.header > div{
-    margin-right: 15px;
-}
+
 .header > div:nth-child(2) {
     margin-left: auto;
 }
@@ -34,7 +31,7 @@
     height: 100%;             /* Make video take full height of container */
     object-fit: cover;        /* Ensures the video fills the container while maintaining aspect ratio */
     aspect-ratio: 16 / 9;
-    border-radius: 25px; /* Optional styling */
+    border-radius: 25px; 
     padding: 20px;            /* Adds space around the video */
     box-sizing: border-box;   /* Ensures padding is included in the container size */
 }
@@ -46,9 +43,10 @@
 .content-grid {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid */
-    gap: 5px; /* Space between items */
-    padding-right: 75px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid */
+    grid-row-gap: 4px; 
+    grid-column-gap: 10px;
+    margin-right: 40px; 
 }
 
 .posters > figure {
@@ -112,4 +110,49 @@ figcaption {
     color: black;
     transform: scale(1.1); /* Slight zoom-in effect */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+}
+
+
+@media screen and (max-width: 650px) {
+    .grid-page {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 40px auto 60px;
+    }
+    .logo {
+        display: none;
+    }
+    .header{
+        margin: auto;
+    }
+    .youtube-video {
+        width: 100%;              /* Make video take full width of container */
+        height: auto;             /* Make video take full height of container */
+        object-fit: cover;        /* Ensures the video fills the container while maintaining aspect ratio */
+        aspect-ratio: 16 / 9;
+        border-radius: 25px; 
+        box-sizing: border-box;   /* Ensures padding is included in the container size */
+    }
+
+}
+
+@media screen and (max-width: 489px) {
+    .grid-page{
+        place-items: center;
+    }
+    .youtube-video {
+        width: 520px;       
+        height: 400px;   
+        margin-left: 40%;
+    }
+    .trending-now{
+        margin-left: 40%;
+    }
+    .content-grid {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr; /* Flexible grid */
+        grid-row-gap: 4px; 
+        margin-left: 50%;
+    }
 }
