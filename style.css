@@ -150,14 +150,14 @@ a {
     color: white; /* Text color matches other inputs */
     padding: 10px 15px; /* Spacing inside the dropdown */
     appearance: none; /* Removes the default browser dropdown arrow */
-    outline: none; /* Removes focus outline */
+    outline: none; 
     cursor: pointer; /* Shows pointer cursor on hover */
 }
 
 .input-box select option {
     background: #333; /* Dropdown options background */
-    color: white; /* Option text color */
-    font-size: 16px; /* Consistent font size */
+    color: white; 
+    font-size: 16px; 
 }
 
 .input-box select:focus {
@@ -192,3 +192,42 @@ a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtler shadow */
 }
 
+/* Mobile Media Query */
+@media screen and (max-width: 650px) {
+    .wrapper {
+        width: 85%; 
+        height: auto;
+        padding: 20px; 
+        backdrop-filter: blur(55px);
+    }
+
+    .wrapper h1 {
+        font-size: 28px; 
+    }
+
+    .input-box input {
+        font-size: 14px; 
+        padding: 15px 35px 15px 15px; 
+    }
+
+    .btn {
+        height: 40px; 
+        font-size: 14px; 
+    }
+
+    .back-button {
+        font-size: 10px; 
+        padding: 4px 8px; 
+    }
+    
+    
+}
+
+@media screen and (max-height: 565px) {
+    .wrapper {
+        height: 80%;
+        padding: 20px; 
+        backdrop-filter: blur(55px);
+        overflow-y: auto; /* Enable vertical scrolling within the wrapper */
+    }
+}

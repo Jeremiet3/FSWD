@@ -51,23 +51,23 @@
     <script>
         function validateForm() {
             const subject = document.getElementById('subject').value;
-    const confirmationMessage = document.getElementById('confirmationMessage');
+            const confirmationMessage = document.getElementById('confirmationMessage');
 
-    if (!subject) {
-        alert('Please select a subject.');
-        return false; // Prevent form submission
-    }
+            if (!subject) {
+                alert('Please select a subject.');
+                return false; // Prevent form submission
+            }
 
-    // Show the confirmation message
-    confirmationMessage.style.display = 'block';
+            // Show the confirmation message
+            confirmationMessage.style.display = 'block';
 
-    // Wait 5 seconds and redirect to homepage.html
-    setTimeout(() => {
-        window.location.href = 'homepage.html';
-    }, 1000); // 1000 milliseconds = 1 second
+            // Wait 5 seconds and redirect to homepage.html
+            setTimeout(() => {
+                window.location.href = 'homepage.html';
+            }, 1000); // 1000 milliseconds = 1 second
 
-    return false; // Prevent form from actually submitting for demonstration purposes
-}
+            return false; // Prevent form from actually submitting for demonstration purposes
+        }
     </script>
 </body>
 </html>
