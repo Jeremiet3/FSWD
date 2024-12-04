@@ -1,6 +1,6 @@
 .grid-page {
     display: grid;
-    grid-template-columns:130px repeat(10, 1fr);
+    grid-template-columns:130px 1fr;
     grid-template-rows: auto 500px 40px auto 40px auto 100px;
 }
 
@@ -122,12 +122,62 @@ figcaption {
 }
 
 
-@media screen and (max-width: 650px) {
-    .grid-page {
-        display: grid;
-        grid-template-columns: 130px 1fr;
-    }
+ul{
+    display: grid;
+    grid-template-columns: 150px; /* Stack items vertically by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+ul li {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+ul a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+    border-radius: 8px;
+    padding: 2px;
+}
+#offcanvas-left {
+    flex: 0 0 280px;
+    color: white;
+    transition-duration: .5s;
+}
+
+#offcanvas-left.hide {
+    margin-left: -280px;
+    background-color: transparent;
+}
+
+.togglebar {
+    margin-top: 20px;
+    position: sticky;  /* Keep the toggle bar sticky */
+    top: 0;            /* Stick it to the top of the viewport */
+    z-index: 1000;     /* Ensure it stays above other content */
+    width: 50%;       
+}
+.toggle i {
+    height: 60px;
+    font-size: 1.4em;
+    width: 100%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    background-color: #000;  
+    border-radius: 12px;  
+    transition: transform 0.5s ease-out
+}
+
+.toggle i:hover{
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 650px) {
     .logo {
         display: none;
     }
@@ -157,58 +207,3 @@ figcaption {
         height: 400px;   
     }
 }
-
-ul{
-    display: grid;
-    grid-template-columns: 150px; /* Stack items vertically by default */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
-    margin-top: 10px;
-    padding: 10px;
-}
-
-ul a:hover {
-    background: white;
-    color: black;
-    transform: scale(1.1); /* Slight zoom-in effect */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
-    border-radius: 8px;
-    padding: 2px;
-}
-#offcanvas-left,
-#offcanvas-right {
-    flex: 0 0 280px;
-    color: white;
-    transition-duration: .5s;
-}
-
-#offcanvas-left.hide {
-    margin-left: -280px;
-    background-color: transparent;
-}
-#offcanvas-right.hide {
-    margin-right: -280px;
-}
-.togglebar {
-    margin-top: 20px;
-    position: sticky;  /* Keep the toggle bar sticky */
-    top: 0;            /* Stick it to the top of the viewport */
-    z-index: 1000;     /* Ensure it stays above other content */
-    width: 50%;       /* Make it span the entire width */
-}
-.toggle i {
-    height: 60px;
-    font-size: 1.4em;
-    width: 100%;
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-    background-color: #000;  
-    border-radius: 12px;  
-}
-
-
