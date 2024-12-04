@@ -27,11 +27,20 @@ html, body {
   background-color: #5e1e1e;
 }
 
-.header, .trailers, .trending-now{
+.header, .trailers, .trending-now {
   font-size: 30px;
   align-items: center;
 }
 
+.toprated {
+  font-size: 30px;
+  align-items: center;
+}
+
+.favorite  {
+  font-size: 30px;
+  align-items: center;
+}
 a {
   color:#fff;
   text-decoration: none;

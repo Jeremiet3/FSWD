@@ -1,0 +1,230 @@
+.grid-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+.header {
+    grid-column: 1 / -1; /* Make the header span across all columns */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+}
+
+.logo {
+    width: max(12%, 100px);
+    height: auto;
+    border-radius: 25px;
+}
+
+.profile {
+    border : 2px solid rgb(118, 116, 116);
+}
+
+/* General button style for links */
+.header a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover animation */
+.header a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Slight zoom-in effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px; /* Consistent font size */
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px; /* Adds consistent padding */
+    text-align: left; /* Aligns text for readability */
+}
+
+table th {
+    background-color: #18232e;
+    color: white;
+    text-align: center;
+}
+
+table td {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header div {
+    margin: 0 10px;
+}
+
+.header a {
+    margin: 0 10px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #5e1e1e;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+section {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background-color: #000;
+}
+
+
+/* Responsive Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    background: #323232;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+table th {
+    background-color: #2a3137;
+    color: white;
+}
+
+th {
+    background: hsl(0 0% 0% / 0.5);
+}
+
+.onclick{
+    transition: all 0.3s ease; /* add a transition */
+}
+
+/* effect on row in the table*/
+.onclick:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* shadow around the row */
+    cursor: pointer; /* change the cursor to be clickable */
+}
+
+tr:nth-of-type(2n){
+    background: hsl(0 0% 0% / 0.2) /* change the background alternatively for each row*/
+}
+
+table td img {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* Basic Styling */
+
+h1,h2 {
+    color: #fff;
+    margin: 20px 0;
+}
+
+/* FAQ Item */
+.faq-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-item p {
+    margin: 10px 0;
+}
+
+.faq-item strong {
+    color: #636364;
+}
+
+/* Highlighted Span for Important Words */
+.highlight {
+    padding: 0 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #494949;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 789px) {
+    .header {
+        align-items: center; /* Center the elements */
+        justify-content: center; /* Ensure elements are centered */
+    }
+
+    .header .logo {
+        max-width: 100px; /* Adjust logo size */
+        margin-bottom: 15px; /* Add space between the logo and links */
+    }
+
+    .header a {
+        font-size: 16px; /* Reduce font size for better readability */
+        margin-left: 0; /* Remove horizontal margin */
+        margin-top: 10px; /* Add space between the links */
+
+    }
+    .logo {
+        display: none;
+    }
+    th {
+        display: none;
+    }
+    td {
+        display : block;
+    }
+    section {
+        width: 90%;
+    }
+}
+
+
+/* Media query for very small screens*/
+@media (max-width: 480px) {
+    .header {
+        margin-right: 15% ; 
+    }
+
+    .header a {
+        font-size: 14px; /* Reduce font size even further for small screens */
+    }
+    .footer{
+        display:none;
+    }
+
+    .profile{
+        border: none;
+    }
+}
+

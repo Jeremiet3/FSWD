@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image: url('./Images/Background.jpg');
+    background-image: url('../Images/Background.jpg');
     background-size: cover; /* Ensures the image covers the entire screen */
     background-position: center; /* Centers the image */
     background-attachment: fixed; /* Makes the image stay fixed when scrolling */
@@ -140,28 +140,18 @@ a {
     outline: none; /* Remove outline on focus */
 }
 
-.input-box select {
+
+.input-box input {
     width: 100%;
     height: 50px;
-    background: transparent; /* Matches the form's background */
+    background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     font-size: 16px;
-    color: white; /* Text color matches other inputs */
-    padding: 10px 15px; /* Spacing inside the dropdown */
-    appearance: none; /* Removes the default browser dropdown arrow */
-    outline: none; 
-    cursor: pointer; /* Shows pointer cursor on hover */
-}
-
-.input-box select option {
-    background: #333; /* Dropdown options background */
-    color: white; 
-    font-size: 16px; 
-}
-
-.input-box select:focus {
-    border-color: white; /* Highlight border on focus */
+    color: white;
+    padding: 15px; /* Add padding to make room for the label */
+    outline: none;
+    transition: all 0.3s ease;
 }
 
 /* Custom arrow for the dropdown */

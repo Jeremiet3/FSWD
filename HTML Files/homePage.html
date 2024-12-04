@@ -3,31 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homePageStyle.css">
-    <link rel="stylesheet" href="basic.css">
+    <link rel="stylesheet" href="../CSS Files/homePageStyle.css">
+    <link rel="stylesheet" href="../CSS Files/basic.css">
     <title>HomePage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body id="home" class="open-left">
     <div class="grid-page">
-        <div class="header">
+        <nav class="header">
             <div>
-                <img src="./Images/Logo.webp" alt="Cineverse Logo" class="logo">
+                <img src="../Images/Logo.webp" alt="Cineverse Logo" class="logo">
             </div>
-            <div><a class="View Profile" href="">View Profile</a></div>
+            <div><a class="View Profile" href="profile.html">View Profile</a></div>
             <div><a class="Contact Us" href="contactus.html">Contact Us</a></div>
             <div> <a class="logout" href="index.html">Logout</a></div>
+        </nav>
+        
+        <div class="togglebar">
+            <div class="toggle" onclick="toggleLeft()">
+                <i class="fa fa-bars"></i> <!--the menu bar -->
+            </div>
+            <div id="offcanvas-left" class="hide">
+                <ul>
+                    <li><a href="#home">Home</a></li><!-- Link to the current page (Home) -->
+                    <li><a href="#trending-now">Trending Now</a></li> 
+                    <li><a href="#favorite">Favorites</a></li> <!-- Link to the Favorites page -->
+                    <li><a href="toprated.html">Top Rated</a></li> <!-- Link to the Top Rated page -->
+                </ul>
+            </div>
         </div>
+        
         <div class="video-container">
             <iframe
-                class="youtube-video"
-                src="https://www.youtube.com/embed/OxpDp7AG1Ww?autoplay=1&mute=1" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+            class="youtube-video"
+            src="https://www.youtube.com/embed/OxpDp7AG1Ww?autoplay=1&mute=1&controls=1&autohide=1&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
             </iframe>
+
         </div>
-        <div class="trending-now">Trending Now</div>
+        <div class="trending-now" id="trending-now">Trending Now</div>
         <div class="content-grid">
             <div class="posters">
                 <figure>
@@ -269,9 +286,46 @@
                 </figure>
             </div>
         </div>
+         
+        
+
+        <div class="favorite" id="favorite">Favorites</div>
+        <div class="content-grid">
+            <div class="posters">
+                <figure>
+                    <a href="https://www.imdb.com/title/tt9218128/?ref_=nv_sr_srsg_1_tt_5_nm_2_in_0_q_gla" target="_blank">
+                        <img src="Posters/l_gladiator-ii-movie-poster_c9934359.jpg" alt="Gladiator 2">
+                        <figcaption>Gladiator 2</figcaption>
+                    </a>
+                </figure>
+            </div>
+            <div class="posters">
+                <figure>
+                    <a href="https://www.imdb.com/title/tt15398776/?ref_=nv_sr_srsg_0_tt_3_nm_5_in_0_q_Oppenheime" target="_blank">
+                        <img src="Posters/xl_oppenheimer-movie-poster_5cebc40c.jpg" alt="Oppenheimer">
+                        <figcaption>Oppenheimer</figcaption>
+                    </a>
+                </figure>
+            </div>
+            <div class="posters">
+                <figure>
+                    <a href="https://www.imdb.com/title/tt11315808/?ref_=nv_sr_srsg_1_tt_7_nm_0_in_0_q_Joker%253A%2520Folie%2520%25C3%25A0%2520Deux" target="_blank">
+                        <img src="Posters/l_joker-folie-a-deux-movie-poster_8b8497ec.jpg" alt="The Dark Knight Rises">
+                        <figcaption>Joker: Folie à Deux</figcaption>
+                    </a>
+                </figure>
+            </div>
+        </div>
+
         <div class="footer">
             <p>&copy; 2024 Movie Library</p>
         </div>
     </div>
+    <script>
+       window.toggleLeft = function() {
+    var element = document.getElementById("offcanvas-left");
+    element.classList.toggle("hide");
+}
+    </script>
 </body>
 </html>

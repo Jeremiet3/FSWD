@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../CSS Files/basic.css">
+    <link rel="stylesheet" href="../CSS Files/profile.css">
+</head>
+<body>
+    <div class="grid-page">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <img src="../Images/Logo.webp" alt="Cineverse Logo" class="logo">
+            </div>
+            <div><a href="homePage.html">Home</a></div>
+            <div><a href="index.html">Logout</a></div>
+        </div>
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>Welcome back</h1>
+            <p>Your Cineverse journey starts here.</p>
+        </section>
+
+        <!-- Profile Details Section -->
+        <section class="profile">
+            <h2>Your Profile</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <p><strong>Membership:</strong> Premium</p>
+        </section>
+
+        <!-- Already Seen Section with Poster Column -->
+        <section>
+            <h2>Already Seen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Title</th>
+                        <th>Date Watched</th>
+                        <th>Genre</th>
+                        <th>Description</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="onclick" onclick="window.open('https://www.imdb.com/title/tt1375666/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_Inception', '_blank');">
+                        <td><img src="Posters/l_1375666_5b234e02.jpg" alt="Inception Poster"></td>
+                        <td>Inception</td>
+                        <td>2024-11-10</td>
+                        <td>Sci-Fi</td>
+                        <td>A thief steals secrets through dream-sharing technology.</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr class="onclick" onclick="window.open('https://www.imdb.com/title/tt15174502/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_Barbie', '_blank');">
+                        <td><img src="Posters/xl_barbie-movie-poster_d5145060.png" alt="Barbie Poster"></td>
+                        <td>Barbie</td>
+                        <td>2024-11-05</td>
+                        <td>Drama</td>
+                        <td>A doll in a fantasy world embarks on a real-world adventure.</td>
+                        <td>4.5/5</td>
+                    </tr>
+                   
+                    <tr class="onclick" onclick="window.open('https://www.imdb.com/title/tt0468569/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_The%2520Dark%2520Knight', '_blank');">
+                        <td><img src="Posters/l_the-dark-knight-movie-poster_e5e6aebe.jpeg" alt="The Dark Knight"></td>
+                        <td>The Dark Knight</td>
+                        <td>2024-07-14</td>
+                        <td>Action</td>
+                        <td>Batman sets out to dismantle the remaining criminal organizations that plague Gotham.</td>
+                        <td>5/5</td>
+                    </tr>
+
+                    
+                    <tr class="onclick" onclick="window.open('https://www.imdb.com/title/tt1345836/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_The%2520Dark%2520Knight%2520Rises', '_blank');">
+                        <td><img src="Posters/l_1345836_429edb63.jpg" alt="The Dark Knight Rises"></td>
+                        <td>The Dark Knight Rises</td>
+                        <td>2024-07-20</td>
+                        <td>Action</td>
+                        <td>Bane emerges from the shadows to face Gotham's protector, Batman.</td>
+                        <td>4.5/5</td>
+                    </tr>
+                    
+                    
+                    <tr class="onclick" onclick="window.open('https://www.imdb.com/title/tt8337290/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_Absolution', '_blank');">
+                        <td><img src="Posters/l_thug-movie-poster_83985716.jpg" alt="Absolution"></td>
+                        <td>Absolution</td>
+                        <td>2024-10-10</td>
+                        <td>Action</td>
+                        <td>A man on a mission of vengeance faces difficult decisions in his pursuit of justice.</td>
+                        <td>4/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Account FAQ</h2>
+        
+            <aside class="faq-item">
+                <p><strong>Q:</strong> <span class="highlight">Is my data safe on your website?</span></p>
+                <p><strong>A:</strong> Yes, we take your privacy seriously. We use encryption to protect your data, and we do not share it with third parties without your consent.</p>
+            </aside>
+        
+            <aside class="faq-item">
+                <p><strong>Q:</strong> <span class="highlight">Do I need an account to use your website?</span></p>
+                <p><strong>A:</strong> No, you do not need an account to browse our content. However, creating an account will allow you to save your preferences and receive updates.</p>
+            </aside>
+        
+            <aside class="faq-item">
+                <p><strong>Q:</strong> <span class="highlight">Can I share content from your website?</span></p>
+                <p><strong>A:</strong> Yes, you can share content from our website by using the share buttons available on each page. Please ensure you follow copyright guidelines when sharing.</p>
+            </aside>
+        
+            <aside class="faq-item">
+                <p><strong>Q:</strong> <span class="highlight">Can I download content from your website?</span></p>
+                <p><strong>A:</strong> Our website does not currently offer downloadable content. However, we provide streaming and viewing options for all available media.</p>
+            </aside>
+        
+            <aside class="faq-item">
+                <p><strong>Q:</strong> <span class="highlight">How do I get updates on new content?</span></p>
+                <p><strong>A:</strong> You can sign up for our newsletter to receive updates on new content and features. Check the "Subscribe" section at the bottom of the homepage.</p>
+            </aside>
+        </section>
+        
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Cineverse</p>
+        </div>
+    </div>
+</body>
+</html>
